@@ -19,7 +19,8 @@ Session Management with useContext: React context is used for managing user sess
 git clone https://github.com/your-repo/blog-website.git
 
 2..Install Dependencies:
-cd blog-websitenpm install
+cd blog-website 
+npm install
 
 3..Configure Environment Variables:
 Create a .env file in the root directory.
