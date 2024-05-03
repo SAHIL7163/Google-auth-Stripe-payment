@@ -3,16 +3,16 @@ Welcome to our Blog Website Platform! Below you'll find all the necessary inform
 
 //* Features *//
 
-Persistent Login: Users can log in and stay logged in across sessions.
-Logout: Users can securely log out of their accounts.
-Axios: Axios is used for making HTTP requests to the server.
-Axios Interceptors: Interceptors are set up to handle JWT token authentication.
-Hooks: Custom React hooks are utilized for various functionalities.
-Multer: Multer is integrated for handling file uploads.
-Role-Based Access Control (RBAC): Users are authorized based on their roles.
-Google Authentication: Users can sign in using their Google accounts.
-Stripe Payment Integration: Users can subscribe to plans and make payments using Stripe.
-Session Management with useContext: React context is used for managing user sessions.
+-->Persistent Login: Users can log in and stay logged in across sessions.
+-->Logout: Users can securely log out of their accounts.
+-->Axios: Axios is used for making HTTP requests to the server.
+-->Axios Interceptors: Interceptors are set up to handle JWT token authentication.
+-->Hooks: Custom React hooks are utilized for various functionalities.
+-->Multer: Multer is integrated for handling file uploads.
+-->Role-Based Access Control (RBAC): Users are authorized based on their roles.
+-->Google Authentication: Users can sign in using their Google accounts.
+-->Stripe Payment Integration: Users can subscribe to plans and make payments using Stripe.
+-->Session Management with useContext: React context is used for managing user sessions.
 
 //* Setup Instructions *//
 1.. Clone the Repository:
