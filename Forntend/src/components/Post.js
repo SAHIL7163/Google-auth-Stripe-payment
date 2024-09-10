@@ -47,7 +47,7 @@ const Post = ({post,postIndex}) => {
    </div>  */}
      <div className='post-image-2 d-flex flex-column justify-content-center'>
           {(postIndex % 2 === 0  && width>768)? (
-            <img className="img-fluid" src={`http://localhost:3500/${post.imageUrl}`} alt='' />
+            <img className="img-fluid" src={`https://blogsite-3gsy.onrender.com/${post.imageUrl}`} alt='' />
           ) : null}
         </div>
     </div>
