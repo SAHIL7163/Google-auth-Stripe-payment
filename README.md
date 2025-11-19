@@ -1,47 +1,87 @@
-Blog Website Platform README
-Welcome to our Blog Website Platform! Below you'll find all the necessary information to get started with our platform, including features, setup instructions, and usage guidelines.
+Blog Website Platform
 
-//* Features *//
+A full-featured blog platform built with React (frontend) and Node.js/Express (backend), supporting user authentication, Google OAuth, Stripe subscriptions, role-based access control, and more.
 
--->Persistent Login: Users can log in and stay logged in across sessions.
--->Logout: Users can securely log out of their accounts.
--->Axios: Axios is used for making HTTP requests to the server.
--->Axios Interceptors: Interceptors are set up to handle JWT token authentication.
--->Hooks: Custom React hooks are utilized for various functionalities.
--->Multer: Multer is integrated for handling file uploads.
--->Role-Based Access Control (RBAC): Users are authorized based on their roles.
--->Google Authentication: Users can sign in using their Google accounts.
--->Stripe Payment Integration: Users can subscribe to plans and make payments using Stripe.
--->Session Management with useContext: React context is used for managing user sessions.
+✨ Features
 
-//* Setup Instructions *//
-1.. Clone the Repository:
-git clone https://github.com/your-repo/blog-website.git
+- **Persistent Login** – Stay logged in across sessions using JWT tokens
+- **Secure Logout** – Properly invalidate sessions
+- **Google Authentication** – Sign in with Google OAuth
+- **Stripe Payment Integration** – Subscribe to premium plans securely
+- **Role-Based Access Control (RBAC)** – Different permissions for regular users, premium users, and admins
+- **Admin Dashboard** – Premium users can create, edit, and delete their own blog posts
+- **File Uploads** – Image/upload handling with Multer
+- **Axios + Interceptors** – Automatic JWT token attachment and refresh handling
+- **Custom React Hooks** – Reusable logic for authentication, user data, etc.
+- **Session Management with useContext** – Global user state management
 
-2..Install Dependencies:
-cd blog-website 
-npm install
+## 🚀 Quick Start
 
-3..Configure Environment Variables:
-Create a .env file in the root directory.
-  REACT_APP_API_BASE_URL=<your_api_base_url>
-  REACT_APP_GOOGLE_CLIENT_ID=<your_google_client_id>
-  REACT_APP_STRIPE_PUBLIC_KEY=<your_stripe_public_key>
-4..Run the Application:
-npm start
-5..Access the Application:
-Open your web browser and navigate to http://localhost:3000.
+### Prerequisites
+- Node.js (v16 or higher)
+- npm or yarn
+- MongoDB (or your preferred database)
+- Google OAuth credentials
+- Stripe account (for payments)
 
+### Installation
 
-//*Usage Guidelines*//
-User Registration and Login: Users need to register and log in to access full blog content. Registration/login is based on JWT tokens.
-Google Sign-In: Users can also sign in using their Google accounts.
-Subscription Plan: Users can subscribe to premium plans to access additional features. Payment is handled securely through Stripe.
-Admin Features: Upon subscription, users gain access to admin features such as publishing, editing, and deleting their own blogs.
-Role-Based Access Control (RBAC): Different user roles have different access levels. Ensure proper role assignments for appropriate access.
-Session Management: User sessions are managed using React context, providing a seamless experience.
-Contributing
-We welcome contributions from the community! If you encounter any issues or have suggestions for improvements, please feel free to open an issue or submit a pull request on our GitHub repository.
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/your-username/blog-website.git
+   cd blog-website
+   ```
 
-   License
-This project is licensed under the MIT License - see the LICENSE file for details.
+2. **Install dependencies**
+   ```bash
+   npm install
+   ```
+
+3. **Create `.env` file** in the root (and in client/server if separated)
+   ```env
+   # Frontend
+   REACT_APP_API_BASE_URL=http://localhost:5000/api
+   REACT_APP_GOOGLE_CLIENT_ID=your-google-client-id.apps.googleusercontent.com
+   REACT_APP_STRIPE_PUBLIC_KEY=XXXXXXXXXXXXXXXXXXXXXXXX
+
+   # Backend
+   PORT=5000
+   MONGO_URI=your_mongodb_connection_string
+   JWT_SECRET=your_very_strong_secret_key
+   GOOGLE_CLIENT_ID=your-google-client-id.apps.googleusercontent.com
+   GOOGLE_CLIENT_SECRET=your-google-client-secret
+   STRIPE_SECRET_KEY=XXXXXXXXXXXXXXXXXXXXXXXX
+   STRIPE_WEBHOOK_SECRET=XXXXXXXXXXXXXXXXXXXXXXXX
+   ```
+
+4. **Run the application**
+   ```bash
+   npm run dev    # or separately: npm start in client & server folders
+   ```
+
+5. **Open the app**  
+   http://localhost:3000
+
+## 👥 Usage
+
+- Register or login (email/password or Google)
+- Subscribe via Stripe to unlock premium features
+- Create, edit, and delete your own blog posts (premium only)
+- Roles are upgraded automatically after successful payment
+
+## 🛠 Tech Stack
+
+**Frontend**  
+React • Axios • React Context • React Router • Stripe.js
+
+**Backend**  
+Node.js • Express • MongoDB • Mongoose • JWT • Multer • Passport.js (Google) • Stripe
+
+## 🤝 Contributing
+
+Contributions are welcome! Fork → create a branch → submit a PR.  
+Please open an issue first for major changes.
+
+## 📄 License
+
+MIT License – see the [LICENSE](LICENSE) file for details.
